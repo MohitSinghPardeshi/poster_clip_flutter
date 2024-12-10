@@ -17,11 +17,11 @@ class UserDetailsController extends StateNotifier<bool> {
       : _userDetailRepository = userDetailRepository,
         super(false);
 
-  void validateAndSubmit(File? userProfile, String name, String desg,
+  void validateAndSubmit(File? userProfile, String name,String desg,
       BuildContext context, bool isUpdate) async {
     state = true;
     final response =
-        await _userDetailRepository.validateAndSubmit(userProfile, name, desg);
+        await _userDetailRepository.validateAndSubmit(userProfile,name,desg);
     state = false;
     response.fold(
       (l) => showSnackBar(context, l.message),

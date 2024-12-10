@@ -9,8 +9,7 @@ import 'package:poster_clip_flutter/features/user_detail_form/controller/user_de
 class UserDetailsScreen extends ConsumerStatefulWidget {
   final String? mobile;
   final bool isUpdate;
-  const UserDetailsScreen(
-      {required this.mobile, this.isUpdate = false, super.key});
+  const UserDetailsScreen({required this.mobile, this.isUpdate = false, super.key});
 
   @override
   ConsumerState<UserDetailsScreen> createState() => _UserDetailsScreenState();
